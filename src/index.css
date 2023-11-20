@@ -1,0 +1,191 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ************************************* */
+/* ********* UNIVERSAL ELEMENTS **********/
+/* ************************************* */
+
+body {
+  background-color: #fefcf7;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 2.5em;
+}
+
+/* ************************************* */
+/* ********* MOBILE BUILD FIRST **********/
+/* ************************************* */
+
+.nav {
+  display: none;
+}
+
+.nav-el {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar {
+  margin-top: 0.2em;
+  background-color: black;
+  width: 25px;
+  height: 3px;
+}
+
+.top-logo {
+  width: 163px;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav-component {
+  display: none;
+}
+
+/* HOME PAGE */
+
+.mobile-header-el {
+  position: relative;
+  background-image: url(../public/images/home/mobile-home-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2.5em;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  z-index: 1000;
+  overflow: hidden; /* Ensure the dark overlay doesn't overflow */
+}
+
+/* Add a pseudo-element for the dark overlay */
+.mobile-header-el::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.mobile-header-text {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  padding: 1em;
+  z-index: 2000;
+  color: white;
+  /* Ensure the text is above the dark overlay */
+  z-index: 2;
+}
+
+.mobile-header-text h3 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-family: "Fraunces", serif;
+}
+
+.mobile-header-text p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #fefcf7;
+}
+
+.mobile-header-text p,
+button {
+  margin-top: 2em;
+}
+
+.mobile-header-btn {
+  cursor: pointer;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  background-color: #0e8784;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+}
