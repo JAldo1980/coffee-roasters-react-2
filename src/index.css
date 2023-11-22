@@ -85,7 +85,7 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
-  padding: 2.5em;
+  padding: 1em;
 }
 
 /* ************************************* */
@@ -151,7 +151,7 @@ body {
 
 .mobile-header-text {
   position: absolute;
-  top: 20%;
+  top: 5%;
   text-align: center;
   padding: 1em;
   z-index: 2000;
@@ -165,6 +165,7 @@ body {
   font-size: 2.5rem;
   line-height: 1;
   font-family: "Fraunces", serif;
+  width: 100%;
 }
 
 .mobile-header-text p {
@@ -188,4 +189,150 @@ button {
   border: none;
   border-radius: 10px;
   padding: 0.5em 1em;
+}
+
+/* COLLECTION AREA */
+
+.collection-el {
+  margin-top: 2em;
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+}
+
+.root-headers {
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+}
+
+/* why us component */
+
+.why-us-main-el {
+  margin-top: 4em;
+  background-color: #282f38;
+  border-radius: 10px;
+  padding: 1em;
+  position: relative;
+  height: 902px;
+}
+
+.why-us-text {
+  text-align: center;
+  color: white;
+}
+
+.why-us-boxes {
+  position: absolute;
+  top: 200px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
+}
+
+.box {
+  background-color: #0e8784;
+  height: 382px;
+  width: 279px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.box image {
+  width: 71px;
+}
+
+.box h4 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.box p {
+  font-size: 0.8rem;
+  color: white;
+  width: 80%;
+}
+
+.how-it-works-header {
+  margin-top: 22em;
+}
+
+.works-card {
+  text-align: center;
+}
+
+.works-card h3 {
+  font-size: 3rem;
+}
+
+.works-card h4 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.works-card p {
+  font-size: 0.9rem;
+}
+
+/* footer */
+
+.footer-box-el {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c343e;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.logo-box-el {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* ********************* */
+/* TABLET RESPONSIVENESS */
+/* ********************* */
+
+@media (min-width: 768px) {
+  .mobile-header-el {
+    background-image: url(../public/images/home/tablet-header-img.png);
+  }
+
+  .mobile-header-text {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    text-align: left;
+    padding: 1em;
+    z-index: 2000;
+    color: white;
+    /* Ensure the text is above the dark overlay */
+    z-index: 2;
+  }
+
+  .mobile-header-text h3 {
+    width: 50%;
+  }
+
+  .mobile-header-text p {
+    width: 60%;
+  }
 }
